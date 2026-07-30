@@ -23,6 +23,6 @@ Download Resume
 
 ## Contact
 
-[LinkedIn]([url](https://www.linkedin.com/in/rohan-vijendra/))
+([LinkedIn](https://www.linkedin.com/in/rohan-vijendra/))
 
 Email
