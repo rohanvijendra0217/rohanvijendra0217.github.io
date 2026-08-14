@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan V — Product Manager, AI & Growth</title>
+<meta name="description" content="Portfolio of Rohan V, Product Manager driving 0→1 development, GTM strategy, and LLM-driven workflows.">
+
+<!--
+  ============================================================
+  FILLED IN FROM: Rohan_V_Resume_PM.pdf
+  ============================================================
+  Only two things left to check, marked "EDIT:" below:
+  1. The LinkedIn URL in the footer is a guess (rohan-v) —
+     paste your real profile link.
+  2. Add your actual resume PDF next to this file and point
+     the "Résumé (PDF)" link at it (currently resume.pdf).
+  Everything else — headline, KPIs, case studies, experience,
+  skills, contact — is pulled straight from your resume.
+  Colors and fonts live in the :root block in <style> below.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* -- Palette -- */
+    --paper: #FAFAF8;
+    --ink: #14171F;
+    --muted: #6B7280;
+    --line: #E5E4DF;
+    --accent: #0F6B5C;      /* deep emerald — growth signal */
+    --accent-soft: #E4F0ED; /* pale emerald tint */
+    --warn: #A6432B;        /* muted rust — risk/failure signal */
+    --warn-soft: #F4E9E5;   /* pale rust tint */
+
+    /* -- Type -- */
+    --display: 'Fraunces', serif;
+    --body: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+
+    --max-w: 780px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; }
+  ::selection{ background: var(--accent-soft); color: var(--accent); }
+
+  :focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Nav ---------- */
+  nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(250,250,248,0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .nav-name{
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .nav-links{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-links a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color .15s ease;
+  }
+  .nav-links a:hover{ color: var(--ink); }
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    padding: 96px 0 56px;
+  }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin: 0 0 20px;
+  }
+  .eyebrow::before{
+    content: "";
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  h1.headline{
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(34px, 5.4vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+  }
+  h1.headline em{
+    font-style: italic;
+    color: var(--accent);
+  }
+  .sub{
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 32px;
+  }
+  .cta-row{ display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn.primary{ background: var(--ink); color: var(--paper); }
+  .btn.primary:hover{ background: var(--accent); border-color: var(--accent); }
+  .btn.ghost{ background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn.ghost:hover{ border-color: var(--ink); }
+
+  /* ---------- KPI ticker (signature element) ---------- */
+  .kpi-strip{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .kpi-grid{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .kpi{
+    padding: 28px 16px;
+    text-align: left;
+    border-left: 1px solid var(--line);
+  }
+  .kpi:first-child{ border-left: none; padding-left: 0; }
+  .kpi-num{
+    font-family: var(--mono);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    letter-spacing: -0.02em;
+  }
+  .kpi-label{
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding: 72px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type{ border-bottom: none; }
+  .section-tag{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 12px;
+  }
+  h2.section-title{
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0 0 32px;
+    letter-spacing: -0.01em;
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .5s ease, transform .5s ease;
+  }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .avatar{
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .about-grid p{ margin: 0 0 14px; color: var(--ink); }
+  .about-grid p.muted{ color: var(--muted); font-size: 15px; }
+
+  /* ---------- Experience (timeline — genuinely sequential) ---------- */
+  .timeline{ list-style: none; margin: 0; padding: 0; }
+  .timeline li{
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .timeline li:first-child{ border-top: none; }
+  .tl-date{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 3px;
+  }
+  .tl-role{ font-weight: 600; font-size: 16px; margin: 0 0 4px; }
+  .tl-company{ color: var(--accent); font-weight: 500; }
+  .tl-impact{ color: var(--muted); font-size: 14.5px; margin: 6px 0 0; }
+
+  /* ---------- Work ---------- */
+  .case-list{ display: flex; flex-direction: column; gap: 1px; background: var(--line); }
+  .case{
+    background: var(--paper);
+    padding: 28px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: background .15s ease;
+  }
+  .case:hover{ background: var(--accent-soft); }
+  .case-title{
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 8px;
+  }
+  .case-desc{ color: var(--muted); font-size: 14.5px; margin: 0 0 12px; max-width: 50ch; }
+  .tag-row{ display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag{
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .case-metric{
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--accent);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .case-metric span{
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  /* ---------- Expandable pipeline detail (inside a case card) ---------- */
+  .case-full{ grid-column: 1 / -1; }
+  .pipeline-detail{ margin-top: 16px; }
+  .pipeline-detail summary{
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  .pipeline-detail summary::-webkit-details-marker{ display: none; }
+  .pipeline-detail summary::before{
+    content: "+";
+    display: inline-block;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+  }
+  .pipeline-detail[open] summary::before{ content: "–"; }
+  .pipeline-steps{
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    counter-reset: step;
+  }
+  .pipeline-steps li{
+    counter-increment: step;
+    position: relative;
+    padding: 12px 0 12px 36px;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .pipeline-steps li:first-child{ border-top: none; }
+  .pipeline-steps li::before{
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 12px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pipeline-steps strong{ color: var(--accent); font-weight: 600; }
+  .pipeline-note{
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    background: var(--accent-soft);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .pipeline-note strong{ color: var(--accent); }
+
+  /* ---------- Case insight callout (always visible, above the fold) ---------- */
+  .case-insight{
+    grid-column: 1 / -1;
+    margin: 2px 0 0;
+    padding: 10px 14px;
+    border-left: 2px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 4px 4px 0;
+  }
+  .case-insight .insight-label{
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .case-insight p{
+    margin: 0;
+    font-size: 13.5px;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* ---------- Sub-sections inside the expandable detail (trade-offs, failure modes) ---------- */
+  .case-subsection{
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .case-subsection h4{
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .note-list{ list-style: none; margin: 0; padding: 0; }
+  .note-list li{
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+  }
+  .note-list li:first-child{ border-top: none; }
+  .note-list li strong{ color: var(--accent); font-weight: 600; }
+
+  /* ---------- Skimmable tile grid (replaces dense bullet paragraphs) ---------- */
+  .note-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .note-tile{
+    padding: 12px 14px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--muted);
+    border-radius: 0 6px 6px 0;
+  }
+  .note-tile.tone-accent{ border-left-color: var(--accent); }
+  .note-tile.tone-warn{ border-left-color: var(--warn); }
+  .note-tile .tile-label{
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+  .note-tile .tile-head{
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .note-tile p{
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  @media (max-width: 640px){
+    .note-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Skills ---------- */
+  .skill-groups{ display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 28px 24px; }
+  .skill-group h3{
+    font-size: 12px;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .skill-group ul{ list-style: none; margin: 0; padding: 0; }
+  .skill-group li{
+    font-size: 14.5px;
+    padding: 6px 0;
+    border-top: 1px solid var(--line);
+  }
+  .skill-group li:first-child{ border-top: none; }
+
+  .cert-line{
+    margin: 36px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .cert-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+  }
+
+  /* ---------- Footer / contact ---------- */
+  footer{ padding: 64px 0 48px; }
+  footer h2.section-title{ margin-bottom: 12px; }
+  .footer-sub{ color: var(--muted); margin: 0 0 28px; max-width: 46ch; }
+  .footer-links{ display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+  .footer-links a{
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .footer-links a:hover{ border-color: var(--accent); color: var(--accent); }
+  .fine{ font-size: 12.5px; color: var(--muted); font-family: var(--mono); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 640px){
+    .kpi-grid{ grid-template-columns: repeat(2, 1fr); }
+    .kpi:nth-child(3){ border-left: none; }
+    .kpi:nth-child(3), .kpi:nth-child(4){ padding-left: 16px; }
+    .about-grid{ grid-template-columns: 1fr; }
+    .timeline li{ grid-template-columns: 1fr; gap: 6px; }
+    .case{ grid-template-columns: 1fr; }
+    .case-metric{ text-align: left; }
+    .skill-groups{ grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; scroll-behavior: auto !important; }
+    .reveal{ opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="nav-name" href="#top">Rohan V /</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Product Manager — AI &amp; Growth</p>
+    <h1 class="headline">I ship products, and build the AI systems when the product needs it.</h1>
+    <p class="sub">4+ years driving 0→1 development and GTM strategy for high-growth B2B SaaS. I pair core product rigor (user empathy, cross-functional alignment, roadmap prioritization) with hands-on technical execution: architecting LLM workflows, Vertex AI integrations, and automated data pipelines.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#work">View case studies</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-num" data-target="2000" data-suffix="+">0</span><span class="kpi-label">AI articles published, zero errors</span></div>
+    <div class="kpi"><span class="kpi-num" data-target="21" data-suffix="%">0</span><span class="kpi-label">Indexing lift across 3.5M pages</span></div>
+    <div class="kpi"><span class="kpi-num" data-target="10" data-suffix="%">0</span><span class="kpi-label">Feature adoption lift in 2 weeks</span></div>
+    <div class="kpi"><span class="kpi-num" data-target="100" data-suffix="K+">0</span><span class="kpi-label">Articles migrated at Apple</span></div>
+  </div>
+</div>
+
+<main>
+  <section id="work">
+    <div class="wrap">
+      <p class="section-tag reveal">Selected work</p>
+      <h2 class="section-title reveal">A few problems worth telling you about</h2>
+
+      <div class="case-list reveal">
+        <div class="case">
+          <div>
+            <h3 class="case-title">Rebuilding the M&amp;A intelligence engine on Vertex AI</h3>
+            <p class="case-desc">Diagnosed hallucination failures in a legacy AI pipeline and designed its replacement end-to-end: a 5-stage, multi-model architecture spanning data ingestion, a 5-step Vertex AI prompt chain, and CMS publish. Specced and validated every model, temperature, and grounding decision myself; engineering implemented it to that spec.</p>
+            <div class="tag-row">
+              <span class="tag">Vertex AI</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Grounding</span>
+            </div>
+          </div>
+          <div class="case-metric">0 errors<span>across 2,000+ articles</span></div>
+
+          <div class="case-insight">
+            <span class="insight-label">Product insight</span>
+            <p>More structured data in means less room for a model to invent facts. That's why data completeness became a hard publish gate, not a nice-to-have.</p>
+          </div>
+
+          <details class="pipeline-detail case-full">
+            <summary>View the pipeline architecture</summary>
+            <ol class="pipeline-steps">
+              <li><strong>Ingest.</strong> Pull the latest acquisitions from three APIs, deduplicate against already-published pages, and require 5 mandatory + at least 14 of 18 additional data points per deal, a threshold I set and tuned specifically to cut hallucination before generation even starts.</li>
+              <li><strong>Draft.</strong> Two Gemini Flash-Lite prompts (temp 0.3) generate the Deal Summary and sector M&amp;A activity, strictly bounded to the fetched data. No outside knowledge allowed at this stage.</li>
+              <li><strong>Ground &amp; verify.</strong> Two Gemini Flash prompts (temp 0.1, Google Search grounding) add web-researched context and fact-check every claim against the original data, while a locked-date tag I designed protects the acquisition date from drifting during web grounding.</li>
+              <li><strong>Format.</strong> A final Gemini 2.0 Flash prompt (temp 0.3) compresses the verified content into a 600-word, Bloomberg-style brief.</li>
+              <li><strong>Publish.</strong> Automated hyperlinking, format validation, and CMS handoff: 5–30 briefs a day, zero human review.</li>
+            </ol>
+
+            <div class="case-subsection">
+              <h4>Trade-offs</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Coverage vs. accuracy</span>
+                  <span class="tile-head">Fewer pages, higher bar</span>
+                  <p>Gated on 14/18 fields instead of publishing everything.</p>
+                </div>
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Speed vs. stability</span>
+                  <span class="tile-head">5s delay, zero 429s</span>
+                  <p>Slower runs, but the pipeline never breaks at scale.</p>
+                </div>
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Automation vs. certainty</span>
+                  <span class="tile-head">One field stays manual</span>
+                  <p>Date locked instead of re-verified by web search.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-subsection">
+              <h4>When this fails</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-warn">
+                  <span class="tile-label">Too few related deals</span>
+                  <span class="tile-head">Page doesn't publish</span>
+                  <p>&lt;4 related deals = skip, not a thin page.</p>
+                </div>
+                <div class="note-tile tone-warn">
+                  <span class="tile-label">Invalid output</span>
+                  <span class="tile-head">Blocked pre-publish</span>
+                  <p>Malformed content never goes live.</p>
+                </div>
+                <div class="note-tile tone-warn">
+                  <span class="tile-label">Mid-pipeline errors</span>
+                  <span class="tile-head">Smart reruns</span>
+                  <p>429 reruns 1 step; other errors restart all.</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="pipeline-note"><strong>My role:</strong> designed, prompt-engineered, and validated every stage of this pipeline, including the model/temperature choice per step and the two-layer date-protection mechanism above. Engineering built the AppScript automation to this spec.</p>
+          </details>
+        </div>
+
+        <div class="case">
+          <div>
+            <h3 class="case-title">Consolidating 8 duplicate buy widgets before they cost 3.5M pages their ranking</h3>
+            <p class="case-desc">A stakeholder proposal called for 8 near-identical "buy document" banners per page: same checkout link, same copy with one sentence changed per entity. Built the case against it with SEO risk modeling, competitive benchmarking, and a mobile UX walkthrough, then got a consolidated design approved instead of overriding the call unilaterally.</p>
+            <div class="tag-row">
+              <span class="tag">Stakeholder Alignment</span>
+              <span class="tag">SEO Risk</span>
+              <span class="tag">UX Research</span>
+            </div>
+          </div>
+          <div class="case-metric">+21%<span>indexing lift</span></div>
+
+          <div class="case-insight">
+            <span class="insight-label">Product insight</span>
+            <p>Eight banners weren't eight options. To Google and to a mobile user, they read as the same offer repeated eight times, and both punished it.</p>
+          </div>
+
+          <details class="pipeline-detail case-full">
+            <summary>View how the case was built</summary>
+            <ol class="pipeline-steps">
+              <li><strong>Diagnose.</strong> The proposal: 8 empty banners per page, each with a different document name, but every buy button routing to the same checkout page and near-identical copy differing by one sentence per entity.</li>
+              <li><strong>Quantify the risk.</strong> Modeled what 8 near-duplicate banners × 3.5M pages actually signals to Google: scaled content abuse and thin/sparse-page patterns, the two triggers most likely to cause deindexing and ranking loss.</li>
+              <li><strong>Build the evidence.</strong> Competitive benchmarking on how other platforms handle multi-offer CTAs, plus a mobile walkthrough showing the empty banners pushing every other page offering below the fold.</li>
+              <li><strong>Push back.</strong> Presented the case directly to stakeholders with the data, laid out multiple alternative designs, and recommended one, rather than shipping a fix unilaterally.</li>
+              <li><strong>Ship &amp; measure.</strong> Consolidated single-widget design went live.</li>
+            </ol>
+
+            <div class="case-subsection">
+              <h4>Alternatives considered</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-warn">
+                  <span class="tile-label">Masked data-teaser table</span>
+                  <span class="tile-head">Only 1–10% coverage</span>
+                  <p>Data too sparse to use platform-wide.</p>
+                </div>
+                <div class="note-tile tone-warn">
+                  <span class="tile-label">Redesigned single banner</span>
+                  <span class="tile-head">Didn't fix the signal</span>
+                  <p>Same duplicate-content problem, nicer look.</p>
+                </div>
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Consolidated card (shipped)</span>
+                  <span class="tile-head">Works on all 3.5M pages</span>
+                  <p>Fixed SEO + mobile UX at once.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-subsection">
+              <h4>Impact</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Indexing</span>
+                  <span class="tile-head">+21%</span>
+                  <p>Core signal the duplication was fixed.</p>
+                </div>
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Ranking</span>
+                  <span class="tile-head">+15%</span>
+                  <p>SERP position recovered.</p>
+                </div>
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Checkouts</span>
+                  <span class="tile-head">+8%</span>
+                  <p>Clarity beat volume.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-subsection">
+              <h4>Trade-offs</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Choice vs. risk</span>
+                  <span class="tile-head">1 real option &gt; 8 fake ones</span>
+                  <p>Consolidation removed the ranking penalty.</p>
+                </div>
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Coverage vs. richness</span>
+                  <span class="tile-head">Chose universal over flashy</span>
+                  <p>Skipped the teaser table's 1–10% coverage.</p>
+                </div>
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Speed vs. alignment</span>
+                  <span class="tile-head">Built the case, not just the fix</span>
+                  <p>Slower ship, real stakeholder buy-in.</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="pipeline-note"><strong>My role:</strong> identified the risk before it shipped, built and presented the SEO + UX case myself, and designed the preferred alternative that stakeholders ultimately approved.</p>
+          </details>
+        </div>
+
+        <div class="case">
+          <div>
+            <h3 class="case-title">Turning unused sidebar space into a personalized adoption engine</h3>
+            <p class="case-desc">Hotjar showed nearly all dashboard engagement clustered middle-and-left; the right sidebar ran generic news that connected to nothing inside the platform. Replaced it with segment- and behavior-driven product widgets that retire themselves once a user actually adopts what they're showing.</p>
+            <div class="tag-row">
+              <span class="tag">Personalization</span>
+              <span class="tag">Behavioral Segmentation</span>
+              <span class="tag">Adoption</span>
+            </div>
+          </div>
+          <div class="case-metric">+10%<span>feature adoption in 2 weeks</span></div>
+
+          <div class="case-insight">
+            <span class="insight-label">Product insight</span>
+            <p>The sidebar wasn't empty; it was showing content that mattered to no one. The fix wasn't better content, it was matching the right widget to the right user at the right moment.</p>
+          </div>
+
+          <details class="pipeline-detail case-full">
+            <summary>View how the personalization was built</summary>
+            <ol class="pipeline-steps">
+              <li><strong>Diagnose.</strong> Hotjar heatmaps and session recordings showed engagement clustered in the middle and left of the dashboard; the right sidebar's generic news feed was effectively unused real estate.</li>
+              <li><strong>Segment.</strong> Mapped each user's existing customer-category tag to the products most relevant to them: funding benchmarks and live deals for VCs, live deals for IBs, profile claimer for founders.</li>
+              <li><strong>Rotate (v1).</strong> Replaced the news feed with 3–4 relevant product widgets per segment (funding benchmarks, newsletters, live deals, Chrome extension, profile claimer), rotating on simple click-based logic to ship and validate the concept fast.</li>
+              <li><strong>Rotate (v2).</strong> Evolved rotation to be driven by the user's recent in-platform searches: someone searching funding-related terms would surface the funding benchmark widget next, instead of rotating blindly.</li>
+              <li><strong>Deprecate on adoption.</strong> Once a user reached 5 sessions using a given product, its widget retired for that user and a new, under-adopted product took its place, so the sidebar kept surfacing whatever the person hadn't discovered yet.</li>
+            </ol>
+
+            <div class="case-subsection">
+              <h4>Impact</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Feature adoption</span>
+                  <span class="tile-head">+10% in 2 weeks</span>
+                  <p>Aggregate lift across widget-surfaced products.</p>
+                </div>
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Extension installs</span>
+                  <span class="tile-head">+18%</span>
+                  <p>Most-overlooked product, biggest lift.</p>
+                </div>
+                <div class="note-tile tone-accent">
+                  <span class="tile-label">Newsletter signups</span>
+                  <span class="tile-head">+27%</span>
+                  <p>Clearest single action converted best.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-subsection">
+              <h4>Trade-offs</h4>
+              <div class="note-grid">
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Simplicity vs. depth</span>
+                  <span class="tile-head">Shipped clicks before intent</span>
+                  <p>Proved the concept before the complex version.</p>
+                </div>
+                <div class="note-tile tone-neutral">
+                  <span class="tile-label">Exposure vs. pressure</span>
+                  <span class="tile-head">Deprecate after 5 sessions</span>
+                  <p>Frees slots for what's still undiscovered.</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="pipeline-note"><strong>My role:</strong> diagnosed the unused-space problem from Hotjar data, designed the segment-to-product mapping, built both rotation logics, and defined the adoption-based deprecation rule that kept the sidebar constantly working toward under-adopted products.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <p class="section-tag reveal">Career so far</p>
+      <h2 class="section-title reveal">Experience</h2>
+      <ul class="timeline reveal">
+        <li>
+          <span class="tl-date">Jan 2025—Now</span>
+          <div>
+            <p class="tl-role">Product Manager · <span class="tl-company">Tracxn Technologies</span></p>
+            <p class="tl-impact">Own the Tracxn Lite roadmap end-to-end; designed and validated the 5-stage AI research engine on Vertex AI (engineering-implemented to spec), launched multi-geo newsletter workflows, and drove structured schema rollout across millions of URLs, lifting search impressions 40% and average ranking from 13.5 to 6.5.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-date">May 2022—Dec 2024</span>
+          <div>
+            <p class="tl-role">Content Operations Specialist (Associate) · <span class="tl-company">Apple (via Adecco)</span></p>
+            <p class="tl-impact">Led the migration of ~100,000 articles to an internal system, delivering it in 1.5 months against a 3-month timeline; built Tableau dashboards translating operational data into executive-level insights.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="section-tag reveal">About</p>
+      <h2 class="section-title reveal">Off the roadmap</h2>
+      <div class="about-grid reveal">
+        <div class="avatar">RV</div>
+        <div>
+          <p>I merge core product rigor (user empathy, cross-functional alignment, roadmap prioritization) with deep technical execution. Most of my recent work sits at the intersection of LLM-driven workflows and growth: architecting the systems, then making sure they actually move a metric.</p>
+          <p class="muted">Based in Bangalore, India. Masters in Computer Applications (Data Science) from Jain University, and a background spanning content operations, SEO, and cloud/AI tooling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <p class="section-tag reveal">Toolkit</p>
+      <h2 class="section-title reveal">What I bring to a team</h2>
+      <div class="skill-groups reveal">
+        <div class="skill-group">
+          <h3>Product &amp; Growth</h3>
+          <ul>
+            <li>PRD authorship &amp; RICE prioritization</li>
+            <li>Stakeholder alignment, evidence-based pushback</li>
+            <li>0→1 execution &amp; GTM strategy</li>
+            <li>Cross-functional leadership</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>AI &amp; LLM Systems</h3>
+          <ul>
+            <li>RAG &amp; grounding architecture</li>
+            <li>Multi-model pipeline design, manual routing</li>
+            <li>Prompt engineering (system/user message design)</li>
+            <li>Inference tuning (model selection, temperature)</li>
+            <li>Output validation &amp; fact-checking pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Growth &amp; Discovery</h3>
+          <ul>
+            <li>A/B testing &amp; behavioral segmentation</li>
+            <li>Competitive intelligence</li>
+            <li>Retention optimization</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; Analytics</h3>
+          <ul>
+            <li>SQL, GA4, API integrations</li>
+            <li>Looker Studio &amp; Tableau</li>
+            <li>Multi-geo lifecycle marketing</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Technical SEO</h3>
+          <ul>
+            <li>Schema markup</li>
+            <li>Crawl budget optimisation</li>
+            <li>Google Search Console</li>
+            <li>SEO automation</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="cert-line reveal"><span class="cert-label">Certifications:</span> Neural Networks &amp; Deep Learning (DeepLearning.ai) · SQL Bootcamp (Udemy) · Tableau Advanced (Udemy) · Basic Statistics (Coursera)</p>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="section-tag reveal">Get in touch</p>
+    <h2 class="section-title reveal">Let's talk about your roadmap</h2>
+    <p class="footer-sub reveal">Open to Product Manager and Technical Product Manager roles at the intersection of AI and growth. I reply to everything.</p>
+    <div class="footer-links reveal">
+      <a href="mailto:rohanvijendra0217@gmail.com">rohanvijendra0217@gmail.com</a>
+      <a href="tel:+916362105372">+91 63621 05372</a>
+      <!-- EDIT: paste your actual LinkedIn profile URL here -->
+      <a href="https://linkedin.com/in/rohan-v" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    </div>
+    <p class="fine">© 2026 Rohan V. Bangalore, India.</p>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll for sections
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Count-up animation for the KPI strip
+  const kpiNums = document.querySelectorAll('.kpi-num');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function animateCount(el){
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const isDecimal = el.dataset.target.includes('.');
+    if(prefersReduced){
+      el.textContent = prefix + target + suffix;
+      return;
+    }
+    const duration = 900;
+    const start = performance.now();
+    function tick(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+      el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.round(current)) + suffix;
+      if(progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const kpiObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        animateCount(entry.target);
+        kpiObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  kpiNums.forEach(el => kpiObserver.observe(el));
+</script>
+
+</body>
+</html>
